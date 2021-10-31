@@ -198,8 +198,10 @@ helpButon.addEventListener('click', () => {
 })
 close_help.addEventListener('click', () => {
     helpBox.style.display = 'none'
+    helpButon.checked = false;
 })
 
-const help = false;
+
+
 
 
