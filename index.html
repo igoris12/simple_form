@@ -130,13 +130,33 @@
 
         <div class="form-container">
             <div class="item">
-                <p>Kredito tipas</p>
-                <select class="select">
-                    <option value="" selected></option>
-                    <option value="personal">Asmeninis kreditas</option>
-                    <option value="family">Šeimos/namų ūkio kreditas</option>
-                </select>
+                <div class="title">
+                    <p>Lizingo laikotarpis (mėnesiai)</p>
+                </div>
+                <div class="select-contaner">
+                    <select class="select">
+                        <option selected value="">Pasirinkite</option>
+                        <option value="6">6</option>
+                        <option value="12">12</option>
+                        <option value="18">18</option>
+                        <option value="24">24</option>
+                        <option selected value="30">30</option>
+                        <option value="36">36</option>
+                        <option value="42">42</option>
+                        <option value="48">48</option>
+                        <option value="54">54</option>
+                        <option selected value="60">60</option>
+                        <option value="66">66</option>
+                        <option value="72">72</option>
+                        <option value="78">78</option>
+                        <option value="84">84</option>
+                        <option value="0">Kiti</option>
+                    </select>
+                </div>
+
+
             </div>
+
             <div class="btn-contaner">
                 <button class="but but-left">Atgal</button>
                 <button class="but but-right">Pirmyn</button>
@@ -144,16 +164,17 @@
         </div>
 
         <div class="form-container">
-            <label for="creditType1" class="radio">
-                <input type="radio" name="personal" class="radio-input" id="creditType1">
+
+            <label for="readConditions" class="radio">
+                <input type="radio" name="read-conditions" class="radio-input" id="readConditions">
                 <div class="radio-radio"></div>
-                CONTENT
+                I read and agree to the terms and conditions
             </label>
 
             <label class="checkbox" for="getInfo">
-                <input type="checkbox" class="checkbox-input" name="getInfo" id="getInfo">
+                <input type="checkbox" class="checkbox-input" name="get-info" id="getInfo">
                 <div class="checkbox-box"></div>
-                Yes send me info
+                Sutinku gauti Kasko draudimo pasiūlymą
             </label>
 
             <div class="btn-contaner">
