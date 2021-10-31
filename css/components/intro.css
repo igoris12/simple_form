@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: var(--color-background);
 }
 
 .intro-container h1 {
@@ -31,8 +30,4 @@
 }
 .intro-container li {
   margin-top: 10px;
-}
-
-.intro-container {
-  display: none;
 }

@@ -13,7 +13,7 @@
     <!-- <div>bubles</div> -->
 
     <div class="wrapper">
-        <div class="intro-container">
+        <div class="intro-container" id="intro">
             <h1>Automobilių lizingas</h1>
             <h2>Mėgaukitės vairuodami savo naująjį automobilį!</h2>
             <p>Jei svarstote įsigyti automobilį – lizingas yra puikus sprendimas.</p>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <form id="car-leasing-form">
-            <div class="form-container">
+            <div class="form-container" id="form1">
                 <div class="item">
                     <div class="title">
                         <p>Kredito tipas</p>
@@ -54,16 +54,13 @@
                             <option value="personal">Asmeninis kreditas</option>
                             <option value="family">Šeimos/namų ūkio kreditas</option>
                         </select>
-
-
-
                     </div>
                 </div>
                 <div class="btn-contaner">
-                    <button class="but but-right">Pirmyn</button>
+                    <button type="button" id="form1-but" class="but but-right">Pirmyn</button>
                 </div>
             </div>
-            <div class="form-container">
+            <div class="form-container" id="form2">
                 <div class="item">
                     <div class="title">
                         <p>Markė</p>
@@ -112,12 +109,12 @@
                     </div>
                 </div>
                 <div class="btn-contaner">
-                    <button class="but but-left">Atgal</button>
-                    <button class="but but-right">Pirmyn</button>
+                    <button type="button" id="form2-but-back" class="but but-left">Atgal</button>
+                    <button type="button" id="form2-but" class="but but-right">Pirmyn</button>
                 </div>
             </div>
 
-            <div class="form-container">
+            <div class="form-container" id="form3">
                 <div class="item">
                     <div class="title">
                         <p>Transporto priemonės kaina</p>
@@ -128,12 +125,12 @@
                     </div>
                 </div>
                 <div class="btn-contaner">
-                    <button class="but but-left">Atgal</button>
-                    <button class="but but-right">Pirmyn</button>
+                    <button type="button" id="form3-but-back" class="but but-left">Atgal</button>
+                    <button type="button" id="form3-but" class="but but-right">Pirmyn</button>
                 </div>
             </div>
 
-            <div class="form-container ">
+            <div class="form-container" id="form4">
                 <div class="item">
                     <div class="title">
                         <p>Lizingo laikotarpis (mėnesiai)</p>
@@ -158,18 +155,15 @@
                             <option value="0">Kiti</option>
                         </select>
                     </div>
-
-
                 </div>
 
                 <div class="btn-contaner">
-                    <button class="but but-left">Atgal</button>
-                    <button class="but but-right">Pirmyn</button>
+                    <button type="button" id="form4-but-back" class="but but-left">Atgal</button>
+                    <button type="button" id="form4-but" class="but but-right">Pirmyn</button>
                 </div>
             </div>
 
-            <div class="form-container">
-
+            <div class="form-container" id="form5">
                 <label for="readConditions" class="radio">
                     <input type="radio" name="read-conditions" class="radio-input" id="readConditions">
                     <div class="radio-radio"></div>
@@ -183,10 +177,11 @@
                 </label>
 
                 <div class="btn-contaner">
-                    <button class="but but-left">Atgal</button>
-                    <button class="but but-right">Pirmyn</button>
+                    <button type="button" class="but but-left" id="form5-but-back">Atgal</button>
+                    <button type="submit" class="but but-right" id="submit">Pateikti</button>
                 </div>
             </div>
+
         </form>
 
 
