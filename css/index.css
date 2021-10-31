@@ -8,7 +8,7 @@
 @import './components/radio.css';
 @import './components/checkbox.css';
 @import './components/summery.css';
-
+@import './components/error.css';
 body {
   background-color: var(--color-background);
   text-align: center;

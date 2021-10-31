@@ -49,6 +49,10 @@
   padding: 5px;
 }
 
+.required {
+  color: red;
+}
+
 @media (max-width: 750px) {
   .form-container .item {
     width: 100%;

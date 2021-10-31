@@ -40,9 +40,10 @@
         </div>
         <form id="car-leasing-form">
             <div class="form-container" id="form1">
+                <div class="error" id="error-box-credit-type"></div>
                 <div class="item">
                     <div class="title">
-                        <p>Kredito tipas</p>
+                        <p>Kredito tipas <i class="required">*</i></p>
                     </div>
                     <label class="checkbox-help" for="credit-type-info">
                         <input type="checkbox" class="checkbox-help-input" name="get-info" id="credit-type-info">
@@ -56,14 +57,16 @@
                         </select>
                     </div>
                 </div>
+
                 <div class="btn-contaner">
                     <button type="button" id="form1-but" class="but but-right">Pirmyn</button>
                 </div>
             </div>
             <div class="form-container" id="form2">
+                <div class="error" id="error-box-car-type"> </div>
                 <div class="item">
                     <div class="title">
-                        <p>Markė</p>
+                        <p>Markė <i class="required">*</i></p>
                     </div>
                     <div class="select-contaner">
                         <select class="select" id="car-type">
@@ -83,9 +86,10 @@
                         </select>
                     </div>
                 </div>
+
                 <div class="item">
                     <div class="title">
-                        <p>Pagaminimo metai</p>
+                        <p>Pagaminimo metai <i class="required">*</i></p>
                     </div>
                     <div class="select-contaner">
                         <select class="select" id="car-model">
@@ -108,6 +112,7 @@
                         </select>
                     </div>
                 </div>
+
                 <div class="btn-contaner">
                     <button type="button" id="form2-but-back" class="but but-left">Atgal</button>
                     <button type="button" id="form2-but" class="but but-right">Pirmyn</button>
@@ -115,15 +120,17 @@
             </div>
 
             <div class="form-container" id="form3">
-                <div class="item">
+                <div class="error" id="error-box-credit-amount"> </div>
+                <div class=" item">
                     <div class="title">
-                        <p>Transporto priemonės kaina</p>
+                        <p>Transporto priemonės kaina <i class="required">*</i></p>
                     </div>
                     <div class="input-contaner">
                         <input class="input" type="text" id="credit-amount">
                         <p>EUR</p>
                     </div>
                 </div>
+
                 <div class="btn-contaner">
                     <button type="button" id="form3-but-back" class="but but-left">Atgal</button>
                     <button type="button" id="form3-but" class="but but-right">Pirmyn</button>
@@ -131,9 +138,10 @@
             </div>
 
             <div class="form-container" id="form4">
+                <div class="error" id="error-box-payment-period"></div>
                 <div class="item">
                     <div class="title">
-                        <p>Lizingo laikotarpis (mėnesiai)</p>
+                        <p>Lizingo laikotarpis (mėnesiai) <i class="required">*</i></p>
                     </div>
                     <div class="select-contaner">
                         <select class="select" id="payment-period">
@@ -147,7 +155,7 @@
                             <option value="42">42</option>
                             <option value="48">48</option>
                             <option value="54">54</option>
-                            <option selected value="60">60</option>
+                            <option value="60">60</option>
                             <option value="66">66</option>
                             <option value="72">72</option>
                             <option value="78">78</option>
@@ -164,17 +172,18 @@
             </div>
 
             <div class="form-container" id="form5">
-                <label for="readConditions" class="radio">
-                    <input type="radio" name="read-conditions" class="radio-input" id="readConditions">
-                    <div class="radio-radio"></div>
-                    I read and agree to the terms and conditions
-                </label>
-
+                <div class="error" id="error-box-readConditions"></div>
                 <label class="checkbox" for="getInfo">
                     <input type="checkbox" class="checkbox-input" name="get-info" id="getInfo">
                     <div class="checkbox-box"></div>
                     Sutinku gauti Kasko draudimo pasiūlymą
                 </label>
+                <label for="readConditions" class="radio">
+                    <input type="radio" name="read-conditions" class="radio-input" id="readConditions">
+                    <div class="radio-radio"></div>
+                    I read and agree to the terms and conditions <i class="required">*</i>
+                </label>
+
 
                 <div class="btn-contaner">
                     <button type="button" class="but but-left" id="form5-but-back">Atgal</button>
@@ -186,10 +195,12 @@
 
 
         <div class="summary-container" id="summery">
-
+            <div class="data" id="info"></div>
+            <button type="button" class="but" id="summery-back">Atgal</button>
+            <button type="button" class="but">Submin</button>
         </div>
     </div>
 </body>
-<script src="./js/index.js"></script>
+<script src="./js/index.js" type="module" defer></script>
 
 </html>

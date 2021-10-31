@@ -19,3 +19,12 @@
   font-size: 15px;
   color: var(--color-brown);
 }
+.summary-container .data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-container {
+  display: none;
+}
