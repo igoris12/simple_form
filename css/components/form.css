@@ -1,0 +1,83 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 8px;
+  gap: 10px;
+  display: none;
+}
+
+.form-container .item {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.form-container .item .title {
+  width: 40%;
+}
+
+.form-container .item .select-contaner {
+  width: 60%;
+}
+
+.form-container .item .input-contaner {
+  display: flex;
+  gap: 10px;
+  width: 60%;
+}
+.form-container .item p {
+  display: inline-block;
+  font-size: 15px;
+  color: var(--color-gray);
+  margin-top: 8px;
+  float: right;
+}
+
+.form-container .item select {
+  display: inline-block;
+  float: left;
+}
+
+.form-container .item input {
+  display: inline-block;
+  float: left;
+}
+
+.form-container .btn-contaner {
+  width: 100%;
+  padding: 5px;
+}
+
+.required {
+  color: red;
+}
+
+@media (max-width: 750px) {
+  .form-container .item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .form-container .item p {
+    float: left;
+  }
+
+  .form-container .item select {
+    width: 100%;
+  }
+  .form-container .item .select-contaner {
+    width: 100%;
+  }
+  .form-container .item .title {
+    width: 100%;
+  }
+  .form-container {
+    align-items: baseline;
+  }
+}
+
+.a {
+  background-color: red;
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Car leasing</title>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+        <div class="intro-container" id="intro">
+            <h1>Automobilių lizingas</h1>
+            <h2>Mėgaukitės vairuodami savo naująjį automobilį!</h2>
+            <p>Jei svarstote įsigyti automobilį – lizingas yra puikus sprendimas.</p>
+            <ul>
+                <li>
+                    <p>
+                        Palūkanų norma įsigyjant automobilį nuo 2,29 % + 6 mėnesių Euribor (ne mažiau kaip 0 %).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Paprastai ir sklandžiai viską galėsite atlikti internetu: pradedant paraiškos pateikimu ir baigiant paskutine įmoka.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Galėsite pirkti automobilį ne tik iš oficialių pardavėjų, bet ir kitų įmonių bei privačių asmenų.
+                    </p>
+                </li>
+            </ul>
+            <div class="btn-contaner">
+                <button class="but" id="intro-but">Pildyti paraišką</button>
+            </div>
+        </div>
+        <form id="car-leasing-form">
+            <div class="form-container" id="form1">
+                <div class="error" id="error-box-credit-type"></div>
+                <div class="help-content" id="help-area">
+                    <p>Pasirinkite kokį kreditą pageidaujate gauti: asmeninį ar šeimos.</p>
+                    <p>Asmeninis kreditas reiškia, kad bus vertinamas jūsų vieno kreditingumas. Jei esate susituokęs (-usi) sutuoktinis nebus vertinamas išduodant šį kreditą.</p>
+                    <p>Šeimos kreditas reiškia, kad bus vertinamas bendras šeimos kreditingumas. Jūsų sutuoktinis (-ė) privalo užpildyti bendraskolio/laiduotojo paraišką ir duoti sutikimą tikrinti duomenis.</p>
+                    <button type="button" class="close-help" id="close-help">x</button>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        <p>Kredito tipas <i class="required">*</i></p>
+
+                    </div>
+                    <label class="checkbox-help" for="credit-type-info">
+                        <input type="checkbox" class="checkbox-help-input" name="get-info" id="credit-type-info">
+                        <div class="checkbox-help-box"></div>
+                    </label>
+                    <div class="select-contaner">
+                        <select id="credit-type" class="select">
+                            <option value="" selected></option>
+                            <option value="personal">Asmeninis kreditas</option>
+                            <option value="family">Šeimos/namų ūkio kreditas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="btn-contaner">
+                    <button type="button" id="form1-but" class="but but-right">Pirmyn</button>
+                </div>
+            </div>
+            <div class="form-container" id="form2">
+                <div class="error" id="error-box-car-type"> </div>
+                <div class="item">
+                    <div class="title">
+                        <p>Markė <i class="required">*</i></p>
+                    </div>
+                    <div class="select-contaner">
+                        <select class="select" id="car-type">
+                            <option selected="" value="">Pasirinkite</option>
+                            <option value="ACURA">Acura</option>
+                            <option value="ALFA ROMEO">Alfa Romeo</option>
+                            <option value="AUDI">Audi</option>
+                            <option value="BMW">BMW</option>
+                            <option value="BUICK">Buick</option>
+                            <option value="CADILLAC">Cadillac</option>
+                            <option value="CHEVROLET">Chevrolet</option>
+                            <option value="CHRYSLER">Chrysler</option>
+                            <option value="CITROEN">Citroen</option>
+                            <option value="CORVETTE">Corvette</option>
+                            <option value="CUPRA">Cupra</option>
+                            <option value="0">Kiti</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        <p>Pagaminimo metai <i class="required">*</i></p>
+                    </div>
+                    <div class="select-contaner">
+                        <select class="select" id="car-model">
+                            <option value="">Pasirinkite</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="btn-contaner">
+                    <button type="button" id="form2-but-back" class="but but-left">Atgal</button>
+                    <button type="button" id="form2-but" class="but but-right">Pirmyn</button>
+                </div>
+            </div>
+
+            <div class="form-container" id="form3">
+                <div class="error" id="error-box-credit-amount"> </div>
+                <div class=" item">
+                    <div class="title">
+                        <p>Transporto priemonės kaina <i class="required">*</i></p>
+                    </div>
+                    <div class="input-contaner">
+                        <input class="input" type="text" id="credit-amount">
+                        <p>EUR</p>
+                    </div>
+                </div>
+
+                <div class="btn-contaner">
+                    <button type="button" id="form3-but-back" class="but but-left">Atgal</button>
+                    <button type="button" id="form3-but" class="but but-right">Pirmyn</button>
+                </div>
+            </div>
+
+            <div class="form-container" id="form4">
+                <div class="error" id="error-box-payment-period"></div>
+                <div class="item">
+                    <div class="title">
+                        <p>Lizingo laikotarpis (mėnesiai) <i class="required">*</i></p>
+                    </div>
+                    <div class="select-contaner">
+                        <select class="select" id="payment-period">
+                            <option selected value="">Pasirinkite</option>
+                            <option value="6">6</option>
+                            <option value="12">12</option>
+                            <option value="18">18</option>
+                            <option value="24">24</option>
+                            <option value="30">30</option>
+                            <option value="36">36</option>
+                            <option value="42">42</option>
+                            <option value="48">48</option>
+                            <option value="54">54</option>
+                            <option value="60">60</option>
+                            <option value="66">66</option>
+                            <option value="72">72</option>
+                            <option value="78">78</option>
+                            <option value="84">84</option>
+                            <option value="0">Kiti</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="btn-contaner">
+                    <button type="button" id="form4-but-back" class="but but-left">Atgal</button>
+                    <button type="button" id="form4-but" class="but but-right">Pirmyn</button>
+                </div>
+            </div>
+
+            <div class="form-container" id="form5">
+                <div class="error" id="error-box-readConditions"></div>
+                <label class="checkbox" for="getInfo">
+                    <input type="checkbox" class="checkbox-input" name="get-info" id="getInfo">
+                    <div class="checkbox-box"></div>
+                    Sutinku gauti Kasko draudimo pasiūlymą
+                </label>
+                <label for="readConditions" class="radio">
+                    <input type="radio" name="read-conditions" class="radio-input" id="readConditions">
+                    <div class="radio-radio"></div>
+                    I read and agree to the terms and conditions <i class="required">*</i>
+                </label>
+
+
+                <div class="btn-contaner">
+                    <button type="button" class="but but-left" id="form5-but-back">Atgal</button>
+                    <button type="submit" class="but but-right" id="submit">Pateikti</button>
+                </div>
+            </div>
+
+        </form>
+
+
+        <div class="summary-container" id="summery">
+            <div class="data" id="info"></div>
+            <button type="button" class="but" id="summery-back">Atgal</button>
+            <button type="button" class="but">Submin</button>
+        </div>
+    </div>
+</body>
+<script src="./js/index.js" type="module" defer></script>
+
+</html>

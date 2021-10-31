@@ -1,0 +1,33 @@
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.intro-container h1 {
+  display: block;
+  color: var(--color-secondary);
+  font-size: 32px;
+}
+
+.intro-container h2 {
+  display: block;
+  font-size: 36px;
+  color: var(--color-brown);
+}
+
+.intro-container p {
+  text-align: left;
+  font-size: 18px;
+  color: var(--color-brown);
+  font-weight: bold;
+}
+
+.intro-container ul {
+  list-style: none;
+  color: var(--color-brown);
+  margin: 10px 0;
+}
+.intro-container li {
+  margin-top: 10px;
+}

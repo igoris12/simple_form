@@ -1,0 +1,31 @@
+.help-content {
+  position: absolute;
+  z-index: 999;
+  word-wrap: break-word;
+  background-color: #eaded7;
+  padding: 20px;
+  border-radius: 3px;
+  min-width: 100px;
+  max-width: 300px;
+  top: 145px;
+}
+
+.help-content .close-help {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid #bcd8db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.help-content {
+  display: none;
+}
