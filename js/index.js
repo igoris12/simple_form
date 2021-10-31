@@ -1,13 +1,7 @@
-// sublit.addEventListener('click', (e) => {
-//     e.preventDefault()
-//     console.log(test.value);
-// })
-
 // Intor start
 const introButton = document.getElementById('intro-but')
 const introDOM = document.getElementById('intro')
 const from1 = document.getElementById('form1')
-
 
 introButton.addEventListener('click', (e) => {
     e.preventDefault()
@@ -15,7 +9,6 @@ introButton.addEventListener('click', (e) => {
     from1.style.display = 'flex'
 })
 // intor end
-
 
 // form1 start
 const from1_button = document.getElementById('form1-but')
@@ -83,7 +76,9 @@ from5_button_back.addEventListener('click', () => {
 
 // submit
 const submit = document.getElementById('submit')
+const summery = document.getElementById('summery')
 
+console.log(summery);
 const credit_type = document.getElementById('credit-type')
 const car_type = document.getElementById('car-type')
 const car_model = document.getElementById('car-model')
@@ -93,19 +88,32 @@ const read_conditions = document.getElementById('readConditions')
 const get_info = document.getElementById('getInfo')
 
 
-
-
-
-console.log(get_info);
-
-
-// const submit = document.getElementById('submit')
-// const submit = document.getElementById('submit')
-// const submit = document.getElementById('submit')
-// const submit = document.getElementById('submit')
-// const submit = document.getElementById('submit')
-
 submit.addEventListener('click', (e) => {
     e.preventDefault()
+    const sum = `
+            <div class="item">
+                <p class="title">Kredito tipas:</p>
+                <p class="value">${credit_type.value == 'personal' ? 'Asmeninis kreditas.' : 'Šeimos/namų ūkio kreditas.'}</p>
+            </div>
+            <div class="item">
+                <p class="title">Markė:</p>
+                <p class="value">${car_type.value}</p>
+            </div>
+            <div class="item">
+                <p class="title">Pagaminimo metai:</p>
+                <p class="value"> ${car_model.value} m.</p>
+            </div>
+            <div class="item">
+                <p class="title">Transporto priemonės kaina:</p>
+                <p class="value"> ${credit_amount.value} EUR</p>
+            </div>
+                        <div class="item">
+                <p class="title">Lizingo laikotarpis (mėnesiai):</p>
+                <p class="value"> ${payment_period.value} EUR</p>
+            </div>
+            <div class="btn-contaner">
+                <button type="button" class="but">Get MOney</button>
+            </div>`
+    summery.innerHTML = sum;
 })
 
