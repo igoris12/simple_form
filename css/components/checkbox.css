@@ -51,7 +51,7 @@
 }
 
 .checkbox-help-input {
-  display: none;
+  display: none !important;
 }
 
 .checkbox-help-box {
@@ -74,8 +74,6 @@
   color: white;
 }
 
-.checkbox-help-input:checked + .checkbox-help-box {
-}
 .checkbox-help-input:checked + .checkbox-help-box::after {
   content: 'x';
   color: black;
