@@ -1,0 +1,38 @@
+@import './basic/reset.css';
+@import './basic/colors.css';
+@import './components/intro.css';
+@import './components/buttons.css';
+
+body {
+  background-color: var(--color-background);
+  background-color: orange;
+  text-align: center;
+}
+
+.wrapper {
+  background-color: var(--color-background);
+  display: inline-block;
+  padding: 20px;
+  width: 50%;
+  margin-top: 40px;
+  border-radius: 5px;
+}
+
+@media (max-width: 830px) {
+  .wrapper {
+    width: 60%;
+  }
+}
+
+@media (max-width: 680px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 520px) {
+  .wrapper {
+    width: 100%;
+    border-radius: 0;
+  }
+}

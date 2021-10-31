@@ -1,0 +1,17 @@
+.but {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  padding: 10px 20px;
+  color: var(--color-light);
+  border-radius: 4px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: auto;
+  border: none;
+}
+
+.but:hover {
+  background-color: #ff6200;
+}
