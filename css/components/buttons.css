@@ -22,3 +22,10 @@
 .but:hover {
   background-color: #ff6200;
 }
+
+@media (max-width: 750px) {
+  .but {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

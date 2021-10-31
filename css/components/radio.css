@@ -33,3 +33,6 @@
 .radio-input:checked + .radio-radio::after {
   transform: scale(1);
 }
+
+@media (max-width: 750px) {
+}

@@ -11,3 +11,9 @@
   outline: none;
   border: 1px solid #bcd8db;
 }
+
+/* @media (max-width: 750px) {
+  .select {
+    width: 100%;
+  }
+} */
