@@ -2,6 +2,7 @@
 @import './basic/colors.css';
 @import './components/intro.css';
 @import './components/buttons.css';
+@import './components/form.css';
 
 body {
   background-color: var(--color-background);
