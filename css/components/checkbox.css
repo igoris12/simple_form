@@ -2,6 +2,8 @@
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  font-size: 15px;
+  color: var(--color-gray);
 }
 
 .checkbox-input {
@@ -37,4 +39,54 @@
 .checkbox-input:hover + .checkbox-box {
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
+}
+
+/* help butten */
+.checkbox-help {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--color-gray);
+}
+
+.checkbox-help-input {
+  display: none;
+}
+
+.checkbox-help-box {
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid #bcd8db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+  background-color: #bcd8db;
+}
+
+.checkbox-help-box::after {
+  content: '?';
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+}
+
+.checkbox-help-input:checked + .checkbox-help-box {
+}
+.checkbox-help-input:checked + .checkbox-help-box::after {
+  content: 'x';
+  color: black;
+  margin-bottom: 5px;
+}
+
+.checkbox-help-input:hover + .checkbox-help-box {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.checkbox-help-input:hover + .checkbox-help-box::after {
+  color: black;
 }
