@@ -128,6 +128,8 @@ const submit = document.getElementById('submit')
 const summery_back = document.getElementById('summery-back')
 const summery = document.getElementById('summery')
 const content = document.getElementById('info')
+const message = document.getElementById('message')
+
 
 
 
@@ -162,11 +164,15 @@ submit.addEventListener('click', (e) => {
                 <p class="title">Lizingo laikotarpis (mėnesiai):</p>
                 <p class="value"> ${payment_period.value} (mėnesiai)</p>
             </div>
+             <div class="item">
+                <p class="title">Papildoma informacija:</p>
+                <p class="value"> ${message.value}</p>
+            </div>
             <div class="btn-contaner">     
             </div>`
 
-
-    if (read_conditions.checked) {
+    console.log(message == '');
+    if (read_conditions.checked && !message == '') {
         console.log(sum);
         content.innerHTML = sum;
         from5.style.display = 'none'

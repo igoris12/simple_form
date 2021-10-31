@@ -10,7 +10,7 @@
 @import './components/summery.css';
 @import './components/error.css';
 @import './components/helpInfo.css';
-@import './components/progressRow.css';
+@import './components/textarea.css';
 body {
   background-color: var(--color-background);
   text-align: center;
