@@ -8,16 +8,39 @@
 }
 
 .form-container .item {
-  display: inline-block;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.form-container .item .title {
+  width: 40%;
+}
+
+.form-container .item .select-contaner {
+  width: 60%;
+}
+
+.form-container .item .input-contaner {
+  display: flex;
+  gap: 10px;
+  width: 60%;
 }
 .form-container .item p {
   display: inline-block;
   font-size: 15px;
   color: var(--color-gray);
+  margin-top: 8px;
+  float: right;
 }
 
 .form-container .item select {
   display: inline-block;
+  float: left;
+}
+
+.form-container .item input {
+  display: inline-block;
+  float: left;
 }
 
 .form-container .btn-contaner {
