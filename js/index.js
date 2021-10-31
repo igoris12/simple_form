@@ -84,6 +84,27 @@ from5_button_back.addEventListener('click', () => {
 // submit
 const submit = document.getElementById('submit')
 
+const credit_type = document.getElementById('credit-type')
+const car_type = document.getElementById('car-type')
+const car_model = document.getElementById('car-model')
+const credit_amount = document.getElementById('credit-amount')
+const payment_period = document.getElementById('payment-period')
+const read_conditions = document.getElementById('readConditions')
+const get_info = document.getElementById('getInfo')
+
+
+
+
+
+console.log(get_info);
+
+
+// const submit = document.getElementById('submit')
+// const submit = document.getElementById('submit')
+// const submit = document.getElementById('submit')
+// const submit = document.getElementById('submit')
+// const submit = document.getElementById('submit')
+
 submit.addEventListener('click', (e) => {
     e.preventDefault()
 })
