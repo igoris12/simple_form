@@ -171,9 +171,8 @@ submit.addEventListener('click', (e) => {
             <div class="btn-contaner">     
             </div>`
 
-    console.log(message == '');
-    if (read_conditions.checked && !message == '') {
-        console.log(sum);
+
+    if (read_conditions.checked && validation(message.value)) {
         content.innerHTML = sum;
         from5.style.display = 'none'
         summery.style.display = 'flex'
