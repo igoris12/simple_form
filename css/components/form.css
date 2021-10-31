@@ -6,3 +6,21 @@
   padding: 8px;
   gap: 10px;
 }
+
+.form-container .item {
+  display: inline-block;
+}
+.form-container .item p {
+  display: inline-block;
+  font-size: 15px;
+  color: var(--color-gray);
+}
+
+.form-container .item select {
+  display: inline-block;
+}
+
+.form-container .btn-contaner {
+  width: 100%;
+  padding: 5px;
+}

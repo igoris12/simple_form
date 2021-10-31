@@ -12,6 +12,13 @@
   border: none;
 }
 
+.but-left {
+  float: left;
+}
+.but-right {
+  float: right;
+}
+
 .but:hover {
   background-color: #ff6200;
 }
