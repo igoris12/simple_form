@@ -9,6 +9,7 @@
 @import './components/checkbox.css';
 @import './components/summery.css';
 @import './components/error.css';
+@import './components/helpInfo.css';
 body {
   background-color: var(--color-background);
   text-align: center;

@@ -184,4 +184,22 @@ summery_back.addEventListener('click', () => {
     from5.style.display = 'flex'
 })
 
+//help button
+const helpButon = document.getElementById('credit-type-info')
+const close_help = document.getElementById('close-help')
+const helpBox = document.getElementById('help-area')
+
+helpButon.addEventListener('click', () => {
+    if (helpButon.checked) {
+        helpBox.style.display = 'inline'
+    } else {
+        helpBox.style.display = 'none'
+    }
+})
+close_help.addEventListener('click', () => {
+    helpBox.style.display = 'none'
+})
+
+const help = false;
+
 

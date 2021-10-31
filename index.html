@@ -41,9 +41,17 @@
         <form id="car-leasing-form">
             <div class="form-container" id="form1">
                 <div class="error" id="error-box-credit-type"></div>
+                <div class="help-content" id="help-area">
+                    <p>Pasirinkite kokį kreditą pageidaujate gauti: asmeninį ar šeimos.</p>
+                    <p>Asmeninis kreditas reiškia, kad bus vertinamas jūsų vieno kreditingumas. Jei esate susituokęs (-usi) sutuoktinis nebus vertinamas išduodant šį kreditą.</p>
+                    <p>Šeimos kreditas reiškia, kad bus vertinamas bendras šeimos kreditingumas. Jūsų sutuoktinis (-ė) privalo užpildyti bendraskolio/laiduotojo paraišką ir duoti sutikimą tikrinti duomenis.</p>
+                    <button type="button" class="close-help" id="close-help">x</button>
+                </div>
+
                 <div class="item">
                     <div class="title">
                         <p>Kredito tipas <i class="required">*</i></p>
+
                     </div>
                     <label class="checkbox-help" for="credit-type-info">
                         <input type="checkbox" class="checkbox-help-input" name="get-info" id="credit-type-info">
