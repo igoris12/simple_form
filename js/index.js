@@ -1,4 +1,15 @@
 import { validation } from './validator.js';
+
+//progress bar]
+const progressBar = document.getElementById('progressBar')
+const progress = document.getElementById('progress')
+const steps = document.querySelectorAll('.step')
+console.log(progressBar);
+let step = 1;
+
+
+
+
 // error boxes
 const credit_type_error_box = document.getElementById('error-box-credit-type')
 const error_box_car_type = document.getElementById('error-box-car-type')
@@ -16,6 +27,8 @@ introButton.addEventListener('click', (e) => {
     e.preventDefault()
     introDOM.style.display = 'none'
     from1.style.display = 'flex'
+    progressBar.style.display = 'flex'
+
 })
 // intor end
 
@@ -30,16 +43,21 @@ from1_button.addEventListener('click', () => {
     if (validation(credit_type.value)) {
         from1.style.display = 'none'
         from2.style.display = 'flex'
+        progress.style.width = '31%'
+
+        steps[1].classList.add('active')
     } else {
         credit_type_error_box.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
         credit_type_error_box.style.display = 'flex'
 
     }
+
 })
 
 from2_button_back.addEventListener('click', () => {
     from2.style.display = 'none'
     from1.style.display = 'flex'
+
 })
 // form1 end
 
@@ -52,7 +70,8 @@ from2_button.addEventListener('click', () => {
     if (validation(car_type.value) && validation(car_model.value)) {
         from2.style.display = 'none'
         from3.style.display = 'flex'
-
+        progress.style.width = '63%'
+        steps[2].classList.add('active')
     } else {
         error_box_car_type.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
         error_box_car_type.style.display = 'flex'
@@ -60,7 +79,6 @@ from2_button.addEventListener('click', () => {
 })
 
 from3_button_back.addEventListener('click', () => {
-
     from3.style.display = 'none'
     from2.style.display = 'flex'
 
@@ -92,6 +110,9 @@ from3_button.addEventListener('click', () => {
     } else {
         from3.style.display = 'none'
         from4.style.display = 'flex'
+        progress.style.width = '95%'
+        steps[3].classList.add('active')
+
     }
 })
 
