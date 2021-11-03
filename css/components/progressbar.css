@@ -32,10 +32,10 @@
   z-index: 1;
 }
 
-.progressbar .step::before {
+/* .progressbar .step::before {
   counter-increment: step;
   content: counter(step);
-}
+} */
 
 .progressbar .step .title {
   position: absolute;
