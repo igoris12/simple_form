@@ -32,19 +32,18 @@
   z-index: 1;
 }
 
-/* .progressbar .step::before {
-  counter-increment: step;
-  content: counter(step);
-} */
-
-.progressbar .step .title {
+.progressbar .labals {
   position: absolute;
   top: calc(100% + 5px);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .progressbar .active {
   background-color: var(--color-primary);
   color: white;
+  position: relative;
 }
 
 .progress-line {
@@ -56,4 +55,10 @@
   transform: rotateY(-50%);
   background-color: var(--color-primary);
   transition: 0.3s;
+}
+
+@media (max-width: 440px) {
+  .progressbar .labals {
+    display: none;
+  }
 }
