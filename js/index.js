@@ -1,4 +1,16 @@
 import { validation } from './validator.js';
+
+//progress bar]
+const progressBar = document.getElementById('progressBar')
+const progress = document.getElementById('progress')
+const steps = document.querySelectorAll('.step')
+const icons = document.querySelectorAll('.icon')
+
+
+
+
+
+
 // error boxes
 const credit_type_error_box = document.getElementById('error-box-credit-type')
 const error_box_car_type = document.getElementById('error-box-car-type')
@@ -16,6 +28,8 @@ introButton.addEventListener('click', (e) => {
     e.preventDefault()
     introDOM.style.display = 'none'
     from1.style.display = 'flex'
+    progressBar.style.display = 'flex'
+
 })
 // intor end
 
@@ -30,16 +44,26 @@ from1_button.addEventListener('click', () => {
     if (validation(credit_type.value)) {
         from1.style.display = 'none'
         from2.style.display = 'flex'
+        progress.style.width = `20%`
+        steps[1].classList.add('active')
+        steps[0].innerText = '✓'
+
     } else {
         credit_type_error_box.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
         credit_type_error_box.style.display = 'flex'
 
     }
+
 })
 
 from2_button_back.addEventListener('click', () => {
     from2.style.display = 'none'
     from1.style.display = 'flex'
+    progress.style.width = '0%'
+    steps[1].classList.remove('active')
+    steps[0].innerText = '1'
+
+
 })
 // form1 end
 
@@ -52,6 +76,9 @@ from2_button.addEventListener('click', () => {
     if (validation(car_type.value) && validation(car_model.value)) {
         from2.style.display = 'none'
         from3.style.display = 'flex'
+        progress.style.width = '40%'
+        steps[2].classList.add('active')
+        steps[1].innerText = '✓'
 
     } else {
         error_box_car_type.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
@@ -60,9 +87,12 @@ from2_button.addEventListener('click', () => {
 })
 
 from3_button_back.addEventListener('click', () => {
-
     from3.style.display = 'none'
     from2.style.display = 'flex'
+    progress.style.width = '20%'
+    steps[2].classList.remove('active')
+    steps[1].innerText = '2'
+
 
 })
 // form2 end
@@ -92,6 +122,11 @@ from3_button.addEventListener('click', () => {
     } else {
         from3.style.display = 'none'
         from4.style.display = 'flex'
+        progress.style.width = '60%'
+        steps[3].classList.add('active')
+        steps[2].innerText = '✓'
+
+
     }
 })
 
@@ -99,6 +134,10 @@ from3_button.addEventListener('click', () => {
 from4_button_back.addEventListener('click', () => {
     from4.style.display = 'none'
     from3.style.display = 'flex'
+    progress.style.width = '40%'
+    steps[3].classList.remove('active')
+    steps[2].innerText = '3'
+
 })
 // form3 end
 
@@ -111,6 +150,10 @@ from4_button.addEventListener('click', () => {
     if (validation(payment_period.value)) {
         from4.style.display = 'none'
         from5.style.display = 'flex'
+        progress.style.width = '80%'
+        steps[4].classList.add('active')
+        steps[3].innerText = '✓'
+
     } else {
         payment_period_error_box.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
         payment_period_error_box.style.display = 'flex'
@@ -120,6 +163,10 @@ from4_button.addEventListener('click', () => {
 from5_button_back.addEventListener('click', () => {
     from5.style.display = 'none'
     from4.style.display = 'flex'
+    progress.style.width = '60%'
+    steps[4].classList.remove('active')
+    steps[3].innerText = '4'
+
 })
 // form4 end
 
@@ -144,10 +191,10 @@ const read_conditions = document.getElementById('readConditions')
 submit.addEventListener('click', (e) => {
     e.preventDefault()
     const sum = `
-    <div class="item">
+        <div class="item" >
                 <p class="title">Kredito tipas:</p>
                 <p class="value">${credit_type.value == 'personal' ? 'Asmeninis kreditas.' : 'Šeimos/namų ūkio kreditas.'}</p>
-            </div>
+            </div >
             <div class="item">
                 <p class="title">Markė:</p>
                 <p class="value">${car_type.value}</p>
@@ -169,13 +216,17 @@ submit.addEventListener('click', (e) => {
                 <p class="value"> ${message.value}</p>
             </div>
             <div class="btn-contaner">     
-            </div>`
+            </div> `
 
 
     if (read_conditions.checked && validation(message.value)) {
         content.innerHTML = sum;
         from5.style.display = 'none'
         summery.style.display = 'flex'
+        progress.style.width = '100%'
+        steps[5].classList.add('active')
+        steps[4].innerText = '✓'
+
 
     } else {
         read_conditions_error_box.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
@@ -187,6 +238,9 @@ submit.addEventListener('click', (e) => {
 summery_back.addEventListener('click', () => {
     summery.style.display = 'none'
     from5.style.display = 'flex'
+    progress.style.width = '80%'
+    steps[5].classList.remove('active')
+    steps[4].innerText = '5'
 })
 
 //help button

@@ -13,6 +13,24 @@
   display: flex;
   gap: 10px;
 }
+
+.form-container .a {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container .a .title {
+  width: 100%;
+}
+
+.form-container .a .select-contaner {
+  width: 100% !important;
+  height: 200px;
+}
+
 .form-container .item .title {
   width: 40%;
 }
@@ -76,8 +94,4 @@
   .form-container {
     align-items: baseline;
   }
-}
-
-.a {
-  background-color: red;
 }
