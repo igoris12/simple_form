@@ -29,6 +29,7 @@ introButton.addEventListener('click', (e) => {
     introDOM.style.display = 'none'
     from1.style.display = 'flex'
     progressBar.style.display = 'flex'
+    steps[0].classList.add('inprogress')
 
 })
 // intor end
@@ -45,7 +46,8 @@ from1_button.addEventListener('click', () => {
         from1.style.display = 'none'
         from2.style.display = 'flex'
         progress.style.width = `20%`
-        steps[1].classList.add('active')
+        steps[1].classList.add('inprogress')
+        steps[0].classList.remove('inprogress')
         steps[0].innerText = '✓'
 
     } else {
@@ -61,6 +63,8 @@ from2_button_back.addEventListener('click', () => {
     from1.style.display = 'flex'
     progress.style.width = '0%'
     steps[1].classList.remove('active')
+    steps[1].classList.remove('inprogress')
+    steps[0].classList.add('inprogress')
     steps[0].innerText = '1'
 
 
@@ -77,7 +81,10 @@ from2_button.addEventListener('click', () => {
         from2.style.display = 'none'
         from3.style.display = 'flex'
         progress.style.width = '40%'
-        steps[2].classList.add('active')
+        steps[2].classList.add('inprogress')
+        steps[1].classList.add('active')
+        steps[1].classList.remove('inprogress')
+
         steps[1].innerText = '✓'
 
     } else {
@@ -91,6 +98,8 @@ from3_button_back.addEventListener('click', () => {
     from2.style.display = 'flex'
     progress.style.width = '20%'
     steps[2].classList.remove('active')
+    steps[2].classList.remove('inprogress')
+    steps[1].classList.add('inprogress')
     steps[1].innerText = '2'
 
 
@@ -123,7 +132,9 @@ from3_button.addEventListener('click', () => {
         from3.style.display = 'none'
         from4.style.display = 'flex'
         progress.style.width = '60%'
-        steps[3].classList.add('active')
+        steps[3].classList.add('inprogress')
+        steps[2].classList.add('active')
+        steps[2].classList.remove('inprogress')
         steps[2].innerText = '✓'
 
 
@@ -136,6 +147,8 @@ from4_button_back.addEventListener('click', () => {
     from3.style.display = 'flex'
     progress.style.width = '40%'
     steps[3].classList.remove('active')
+    steps[3].classList.remove('inprogress')
+    steps[2].classList.add('inprogress')
     steps[2].innerText = '3'
 
 })
@@ -151,7 +164,9 @@ from4_button.addEventListener('click', () => {
         from4.style.display = 'none'
         from5.style.display = 'flex'
         progress.style.width = '80%'
-        steps[4].classList.add('active')
+        steps[4].classList.add('inprogress')
+        steps[3].classList.add('active')
+        steps[3].classList.remove('inprogress')
         steps[3].innerText = '✓'
 
     } else {
@@ -165,6 +180,8 @@ from5_button_back.addEventListener('click', () => {
     from4.style.display = 'flex'
     progress.style.width = '60%'
     steps[4].classList.remove('active')
+    steps[4].classList.remove('inprogress')
+    steps[3].classList.add('inprogress')
     steps[3].innerText = '4'
 
 })
@@ -224,7 +241,9 @@ submit.addEventListener('click', (e) => {
         from5.style.display = 'none'
         summery.style.display = 'flex'
         progress.style.width = '100%'
-        steps[5].classList.add('active')
+        steps[5].classList.add('inprogress')
+        steps[4].classList.add('active')
+        steps[4].classList.remove('inprogress')
         steps[4].innerText = '✓'
 
 
@@ -240,6 +259,8 @@ summery_back.addEventListener('click', () => {
     from5.style.display = 'flex'
     progress.style.width = '80%'
     steps[5].classList.remove('active')
+    steps[5].classList.remove('inprogress')
+    steps[4].classList.add('inprogress')
     steps[4].innerText = '5'
 })
 

@@ -9,12 +9,12 @@
 }
 .progressbar::before {
   content: '';
-  height: 4px;
+  height: 2px;
   width: 100%;
   position: absolute;
   top: 50%;
   transform: rotateY(-50%);
-  background-color: gray;
+  background-color: #d4c4bc;
   counter-reset: step;
 }
 
@@ -22,13 +22,15 @@
   border: 1px solid black;
   width: 40px;
   height: 40px;
+  font-weight: 900;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   position: relative;
   border: none;
-  background-color: var(--color-gray);
+  background-color: #d4c4bc;
   z-index: 1;
 }
 
@@ -38,9 +40,16 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  color: #257886;
+  font-size: 15px;
 }
 
 .progressbar .active {
+  background-color: #9c6;
+  color: white;
+  position: relative;
+}
+.progressbar .inprogress {
   background-color: var(--color-primary);
   color: white;
   position: relative;
@@ -48,12 +57,12 @@
 
 .progress-line {
   content: '';
-  height: 4px;
+  height: 2px;
   width: 0;
   position: absolute;
   top: 50%;
   transform: rotateY(-50%);
-  background-color: var(--color-primary);
+  background-color: #9c6;
   transition: 0.3s;
 }
 
