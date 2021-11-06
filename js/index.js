@@ -4,147 +4,110 @@ import { validation } from './validator.js';
 const progressBar = document.getElementById('progressBar')
 const progress = document.getElementById('progress')
 const steps = document.querySelectorAll('.step')
-const icons = document.querySelectorAll('.icon')
 
+// get buttons 
+const nextButtons = document.querySelectorAll('.but-next');
+const backButtons = document.querySelectorAll('.but-back');
 
-
-
-
+// forms containers
+const forms = document.querySelectorAll('.form-container')
 
 // error boxes
-const credit_type_error_box = document.getElementById('error-box-credit-type')
-const error_box_car_type = document.getElementById('error-box-car-type')
-const credit_amount_error_box = document.getElementById('error-box-credit-amount')
-const payment_period_error_box = document.getElementById('error-box-payment-period')
-const read_conditions_error_box = document.getElementById('error-box-readConditions')
+const errors = document.querySelectorAll('.error');
 
 // Intor start
-
-const introButton = document.getElementById('intro-but')
 const introDOM = document.getElementById('intro')
-const from1 = document.getElementById('form1')
-
-introButton.addEventListener('click', (e) => {
+nextButtons[0].addEventListener('click', (e) => {
     e.preventDefault()
     introDOM.style.display = 'none'
-    from1.style.display = 'flex'
+    forms[0].style.display = 'flex'
     progressBar.style.display = 'flex'
     steps[0].classList.add('inprogress')
-
 })
-// intor end
-
-
 
 // form1 start
-const from1_button = document.getElementById('form1-but')
-const from2 = document.getElementById('form2')
-const from2_button_back = document.getElementById('form2-but-back')
-
-from1_button.addEventListener('click', () => {
+nextButtons[1].addEventListener('click', () => {
     if (validation(credit_type.value)) {
-        from1.style.display = 'none'
-        from2.style.display = 'flex'
+        forms[0].style.display = 'none'
+        forms[1].style.display = 'flex'
         progress.style.width = `20%`
         steps[1].classList.add('inprogress')
         steps[0].classList.remove('inprogress')
         steps[0].innerText = '✓'
-
     } else {
-        credit_type_error_box.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
-        credit_type_error_box.style.display = 'flex'
-
+        errors[0].innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
+        errors[0].style.display = 'flex'
     }
-
 })
 
-from2_button_back.addEventListener('click', () => {
-    from2.style.display = 'none'
-    from1.style.display = 'flex'
+backButtons[0].addEventListener('click', () => {
+    forms[1].style.display = 'none'
+    forms[0].style.display = 'flex'
     progress.style.width = '0%'
     steps[1].classList.remove('active')
     steps[1].classList.remove('inprogress')
     steps[0].classList.add('inprogress')
-    steps[0].innerText = '1'
-
-
+    steps[0].innerText = '1';
 })
-// form1 end
 
 // form2 start
-const from2_button = document.getElementById('form2-but')
-const from3 = document.getElementById('form3')
-const from3_button_back = document.getElementById('form3-but-back')
-
-from2_button.addEventListener('click', () => {
+nextButtons[2].addEventListener('click', () => {
     if (validation(car_type.value) && validation(car_model.value)) {
-        from2.style.display = 'none'
-        from3.style.display = 'flex'
+        forms[1].style.display = 'none'
+        forms[2].style.display = 'flex'
         progress.style.width = '40%'
         steps[2].classList.add('inprogress')
         steps[1].classList.add('active')
         steps[1].classList.remove('inprogress')
-
         steps[1].innerText = '✓'
-
     } else {
-        error_box_car_type.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
-        error_box_car_type.style.display = 'flex'
+        errors[1].innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
+        errors[1].style.display = 'flex'
     }
 })
 
-from3_button_back.addEventListener('click', () => {
-    from3.style.display = 'none'
-    from2.style.display = 'flex'
+backButtons[1].addEventListener('click', () => {
+    forms[2].style.display = 'none'
+    forms[1].style.display = 'flex'
     progress.style.width = '20%'
     steps[2].classList.remove('active')
     steps[2].classList.remove('inprogress')
     steps[1].classList.add('inprogress')
     steps[1].innerText = '2'
-
-
 })
-// form2 end
 
 // form3 start
-const from4 = document.getElementById('form4')
-const from4_button_back = document.getElementById('form4-but-back')
-const from3_button = document.getElementById('form3-but')
-
-from3_button.addEventListener('click', () => {
+nextButtons[3].addEventListener('click', () => {
     if (parseInt(credit_amount.value) < 7000) {
-        credit_amount_error_box.innerText = "Mažiausia transporto priemonės kaina yra 7000 EUR"
-        credit_amount_error_box.style.display = 'flex'
+        errors[2].innerText = "Mažiausia transporto priemonės kaina yra 7000 EUR"
+        errors[2].style.display = 'flex'
     }
     else if (credit_amount.value > 50000) {
-        credit_amount_error_box.innerText = "Didziausia transporto priemonės kaina yra 50000 EUR"
-        credit_amount_error_box.style.display = 'flex'
+        errors[2].innerText = "Didziausia transporto priemonės kaina yra 50000 EUR"
+        errors[2].style.display = 'flex'
 
     }
     else if (!validation(credit_amount.value)) {
-        credit_amount_error_box.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
-        credit_amount_error_box.style.display = 'flex'
+        errors[2].innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
+        errors[2].style.display = 'flex'
     }
     else if (isNaN(credit_amount.value * 1)) {
-        credit_amount_error_box.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
-        credit_amount_error_box.style.display = 'flex'
+        errors[2].innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
+        errors[2].style.display = 'flex'
     } else {
-        from3.style.display = 'none'
-        from4.style.display = 'flex'
+        forms[2].style.display = 'none'
+        forms[3].style.display = 'flex'
         progress.style.width = '60%'
         steps[3].classList.add('inprogress')
         steps[2].classList.add('active')
         steps[2].classList.remove('inprogress')
         steps[2].innerText = '✓'
-
-
     }
 })
 
-
-from4_button_back.addEventListener('click', () => {
-    from4.style.display = 'none'
-    from3.style.display = 'flex'
+backButtons[2].addEventListener('click', () => {
+    forms[3].style.display = 'none'
+    forms[2].style.display = 'flex'
     progress.style.width = '40%'
     steps[3].classList.remove('active')
     steps[3].classList.remove('inprogress')
@@ -152,50 +115,37 @@ from4_button_back.addEventListener('click', () => {
     steps[2].innerText = '3'
 
 })
-// form3 end
 
 // form4 start
-const from5 = document.getElementById('form5')
-const from5_button_back = document.getElementById('form5-but-back')
-const from4_button = document.getElementById('form4-but')
-
-from4_button.addEventListener('click', () => {
+nextButtons[4].addEventListener('click', () => {
     if (validation(payment_period.value)) {
-        from4.style.display = 'none'
-        from5.style.display = 'flex'
+        forms[3].style.display = 'none'
+        forms[4].style.display = 'flex'
         progress.style.width = '80%'
         steps[4].classList.add('inprogress')
         steps[3].classList.add('active')
         steps[3].classList.remove('inprogress')
         steps[3].innerText = '✓'
-
     } else {
-        payment_period_error_box.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
-        payment_period_error_box.style.display = 'flex'
+        errors[3].innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
+        errors[3].style.display = 'flex'
     }
 })
 
-from5_button_back.addEventListener('click', () => {
-    from5.style.display = 'none'
-    from4.style.display = 'flex'
+backButtons[3].addEventListener('click', () => {
+    forms[4].style.display = 'none'
+    forms[3].style.display = 'flex'
     progress.style.width = '60%'
     steps[4].classList.remove('active')
     steps[4].classList.remove('inprogress')
     steps[3].classList.add('inprogress')
     steps[3].innerText = '4'
-
 })
-// form4 end
 
 // submit
-const submit = document.getElementById('submit')
-const summery_back = document.getElementById('summery-back')
 const summery = document.getElementById('summery')
 const content = document.getElementById('info')
 const message = document.getElementById('message')
-
-
-
 
 const credit_type = document.getElementById('credit-type')
 const car_type = document.getElementById('car-type')
@@ -204,8 +154,7 @@ const credit_amount = document.getElementById('credit-amount')
 const payment_period = document.getElementById('payment-period')
 const read_conditions = document.getElementById('readConditions')
 
-
-submit.addEventListener('click', (e) => {
+nextButtons[5].addEventListener('click', (e) => {
     e.preventDefault()
     const sum = `
         <div class="item" >
@@ -235,28 +184,24 @@ submit.addEventListener('click', (e) => {
             <div class="btn-contaner">     
             </div> `
 
-
     if (read_conditions.checked && validation(message.value)) {
         content.innerHTML = sum;
-        from5.style.display = 'none'
+        forms[4].style.display = 'none'
         summery.style.display = 'flex'
         progress.style.width = '100%'
         steps[5].classList.add('inprogress')
         steps[4].classList.add('active')
         steps[4].classList.remove('inprogress')
         steps[4].innerText = '✓'
-
-
     } else {
-        read_conditions_error_box.innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
-        read_conditions_error_box.style.display = 'flex'
+        errors[4].innerText = "Pažymėti laukai neužpildyti arba su klaidom!!"
+        errors[4].style.display = 'flex'
     }
-
-
 })
-summery_back.addEventListener('click', () => {
+
+backButtons[4].addEventListener('click', () => {
     summery.style.display = 'none'
-    from5.style.display = 'flex'
+    forms[4].style.display = 'flex'
     progress.style.width = '80%'
     steps[5].classList.remove('active')
     steps[5].classList.remove('inprogress')
@@ -280,8 +225,3 @@ close_help.addEventListener('click', () => {
     helpBox.style.display = 'none'
     helpButon.checked = false;
 })
-
-
-
-
-
