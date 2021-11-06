@@ -225,8 +225,3 @@ close_help.addEventListener('click', () => {
     helpBox.style.display = 'none'
     helpButon.checked = false;
 })
-
-
-
-
-

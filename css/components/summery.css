@@ -18,6 +18,7 @@
 .summary-container .item .value {
   font-size: 15px;
   color: var(--color-brown);
+  word-break: break-word;
 }
 .summary-container .data {
   display: flex;
